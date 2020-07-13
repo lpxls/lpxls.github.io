@@ -4,26 +4,26 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="None">
         
         
-        <link rel="shortcut icon" href="img/favicon.ico">
-        <title>LO'S SPACE</title>
-        <link href="css/bootstrap.min.css" rel="stylesheet">
-        <link href="css/font-awesome.min.css" rel="stylesheet">
-        <link href="css/base.css" rel="stylesheet">
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>LifeRaftVentilation - LO'S SPACE</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/docco.min.css">
 
-        <script src="js/jquery-1.10.2.min.js" defer></script>
-        <script src="js/bootstrap.min.js" defer></script>
+        <script src="../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../js/bootstrap.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script>hljs.initHighlightingOnLoad();</script> 
     </head>
 
-    <body class="homepage">
+    <body>
         <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href=".">LO'S SPACE</a>
+                <a class="navbar-brand" href="..">LO'S SPACE</a>
                 <!-- Expander button -->
                 <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
                     <span class="navbar-toggler-icon"></span>
@@ -33,20 +33,20 @@
                 <div id="navbar-collapse" class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
                             <li class="navitem active">
-                                <a href="." class="nav-link">Home</a>
+                                <a href="./" class="nav-link">LifeRaftVentilation</a>
                             </li>
                             <li class="navitem">
-                                <a href="lrv/" class="nav-link">LifeRaftVentilation</a>
+                                <a href="../fr/" class="nav-link">Flap-rudder Research</a>
                             </li>
                             <li class="navitem">
-                                <a href="fr/" class="nav-link">Flap-rudder Research</a>
+                                <a href="../future/" class="nav-link">Future work</a>
                             </li>
                             <li class="navitem">
-                                <a href="future/" class="nav-link">Future work</a>
-                            </li>
-                            <li class="navitem">
-                                <a href="about/" class="nav-link">About</a>
+                                <a href="../about/" class="nav-link">About</a>
                             </li>
                         </ul>
 
@@ -57,12 +57,12 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" class="nav-link disabled">
+                                <a rel="prev" href=".." class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" href="lrv/" class="nav-link">
+                                <a rel="next" href="../fr/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
@@ -84,17 +84,13 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#intro" class="nav-link">Intro</a>
+            <li class="nav-item" data-level="1"><a href="#imo-liferaft-ventilation-research" class="nav-link">IMO Liferaft Ventilation Research </a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#marine" class="nav-link">Marine </a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#auto" class="nav-link">Auto </a>
+            <li class="nav-item" data-level="2"><a href="#1-experiment" class="nav-link">1 Experiment</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#future-work" class="nav-link">Future work </a>
+            <li class="nav-item" data-level="2"><a href="#2-cfd-simulation" class="nav-link">2 CFD Simulation</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -105,45 +101,41 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<p><center><font size=12 face="Arial">LO'S SPACE</font></center>
-<center><font size=2 face="Arial">Puxing's personal blog powered by Mkdocs and Github</font></center></p>
+<h1 id="imo-liferaft-ventilation-research">IMO Liferaft Ventilation Research <img src="/1.svg" width = "40" height = "35" div align=left /></h1>
 <hr />
-<h1 id="intro">Intro</h1>
-<p>Hello and Welcome to LO's SPACE! Thanks for visiting Puxing's personal Blog. Here is the entry from Github: <a href="http://lpxls.github.io/">lpxls.github.io</a>.
-You can find my recent project progress and future project plans here for your information.</p>
-<blockquote>
-<p>THE STARS, MY DESTINY.</p>
+<h2 id="1-experiment">1 Experiment</h2>
+<hr />
+<h2 id="2-cfd-simulation">2 CFD Simulation</h2>
+<h3 id="21-dominant-equations">2.1 Dominant equations</h3>
+<h4 id="211-the-mass-conservation-equation">2.1.1 The Mass Conservation Equation</h4>
+<ul>
+<li>The equation for conservation of mass, or continuity equation, can be written as follows:
+$\frac{\partial \rho}{\partial t}+\nabla \cdot(\rho \vec{v})=S_{m}$<blockquote>
+<p>the general form of the mass conservation equation and is valid for incompressible as well as compressible flows. The $S_{m}$ source is the mass added to the continuous phase from
+the dispersed second phase (for example, due to vaporization of liquid droplets) and any user-defined sources.</p>
 </blockquote>
-<hr />
-<h2 id="marine">Marine <img src="/1.svg" width = "40" height = "35" div align=left /></h2>
+</li>
+<li>For 2D axisymmetric geometries, the continuity equation is given by:
+  $\frac{\partial \rho}{\partial t}+\frac{\partial}{\partial x}\left(\rho v_{x}\right)+\frac{\partial}{\partial r}\left(\rho v_{r}\right)+\frac{\rho v_{r}}{r}=S_{m}$</li>
+</ul>
+<h4 id="212-momentum-conservation-equations">2.1.2 Momentum Conservation Equations</h4>
+<h4 id="212-species-transport-equations">2.1.2 Species Transport Equations</h4>
 <ul>
-<li>
-<p>IMO Liferaft Ventilation Research<code>20%</code>
+<li>When you choose to solve conservation equations for chemical species, The Solver predicts the local mass fraction of each species, , through the solution of a convection-diffusion equation for the th species. This conservation equation takes the following general form:
 \
-<img src="/LR1.JPG" width = "800" height = "350" div align=left /></p>
-</li>
-<li>
-<p>Research on  the minimum torque of the flap-type rudder and its Steering Gear Equipement <code>10%</code>
-\
-<img src="/FR1.JPG" width = "800" height = "350" div align=left /></p>
-</li>
-<li>IMO Lifeboat Seat Space Criteria Review. <code>5%</code></li>
-<li>Design Optimism for Oil Tanker.</li>
-<li>Guidance on the construction of Free-fall Lifeboat</li>
+  $\frac{\partial}{\partial t}\left(\rho Y_{i}\right)+\nabla \cdot\left(\rho \vec{v} Y_{i}\right)=-\nabla \cdot \vec{J}<em>{i}+R</em>{i}+S_{i}$</li>
+</ul>
+<blockquote>
+<p>where is the net rate of production of species by chemical reaction (described later in this section) and is the rate of creation by addition from the dispersed phase plus any user-defined sources. An equation of this form will be solved for species where is the total number of fluid phase chemical species present in the system. Since the mass fraction of the species must sum to unity, the th mass fraction is determined as one minus the sum of the solved mass fractions. To minimize numerical error, the th species should be selected as that species with the overall largest mass fraction, such as when the oxidizer is air.</p>
+</blockquote>
+<ul>
+<li>Mass Diffusion in Laminar Flows
+  $\vec{J}<em>{i}=-\rho D</em>{i, m} \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}$</li>
+<li>Mass Diffusion in Turbulent Flows
+$ \vec{J}<em>{i}=-\left(\rho D</em>{i, m}+\frac{\mu_{t}}{S c_{t}}\right) \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}$</li>
 </ul>
 <hr />
-<h2 id="auto">Auto <img src="/2.svg" width = "40" height = "30" div align=left /></h2>
-<ul>
-<li>Auto Checklist Filler <code>50%</code></li>
-<li>Auto Comments Generator for OT <code>50%</code></li>
-<li>Comment Spider</li>
-<li>NAPA Macro Generator for OT</li>
-</ul>
-<hr />
-<h2 id="future-work">Future work <img src="/3.svg" width = "40" height = "30" div align=left /></h2>
-<ul>
-<li>Here is my <a href="/future/index.html">Future Work Plan</a>.</li>
-</ul></div>
+<p><strong>TO BE CONTINUED</strong></p></div>
             </div>
         </div>
 
@@ -152,11 +144,11 @@ You can find my recent project progress and future project plans here for your i
             <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
         </footer>
         <script>
-            var base_url = ".",
+            var base_url = "..",
                 shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
-        <script src="js/base.js" defer></script>
-        <script src="search/main.js" defer></script>
+        <script src="../js/base.js" defer></script>
+        <script src="../search/main.js" defer></script>
 
         <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-lg">
@@ -224,8 +216,3 @@ You can find my recent project progress and future project plans here for your i
 
     </body>
 </html>
-
-<!--
-MkDocs version : 1.1.2
-Build Date UTC : 2020-07-13 15:49:16.634442+00:00
--->
