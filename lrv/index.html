@@ -84,16 +84,8 @@
     <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
         <ul class="nav flex-column">
             
-            <li class="nav-item" data-level="1"><a href="#imo-liferaft-ventilation-research" class="nav-link">IMO Liferaft Ventilation Research </a>
+            <li class="nav-item" data-level="2"><a href="#imo-liferaft-ventilation-research" class="nav-link">IMO Liferaft Ventilation Research </a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#1-experiment" class="nav-link">1 Experiment</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#2-cfd-simulation" class="nav-link">2 CFD Simulation</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
               </ul>
             </li>
         </ul>
@@ -101,38 +93,37 @@
 </div></div>
                     <div class="col-md-9" role="main">
 
-<h1 id="imo-liferaft-ventilation-research">IMO Liferaft Ventilation Research <img src="/1.svg" width = "40" height = "35" div align=left /></h1>
+<h2 id="imo-liferaft-ventilation-research">IMO Liferaft Ventilation Research <img src="/1.svg" width = "40" height = "35" div align=left /></h2>
 <hr />
-<h2 id="1-experiment">1 Experiment</h2>
+<h3 id="1-experiment">1 Experiment</h3>
 <hr />
-<h2 id="2-cfd-simulation">2 CFD Simulation</h2>
-<h3 id="21-dominant-equations">2.1 Dominant equations</h3>
-<h4 id="211-the-mass-conservation-equation">2.1.1 The Mass Conservation Equation</h4>
+<h3 id="2-cfd-simulation">2 CFD Simulation</h3>
+<h4 id="21-dominant-equations">2.1 Dominant equations</h4>
+<h5 id="211-the-mass-conservation-equation">2.1.1 The Mass Conservation Equation</h5>
 <ul>
 <li>The equation for conservation of mass, or continuity equation, can be written as follows:
-$\frac{\partial \rho}{\partial t}+\nabla \cdot(\rho \vec{v})=S_{m}$<blockquote>
-<p>the general form of the mass conservation equation and is valid for incompressible as well as compressible flows. The $S_{m}$ source is the mass added to the continuous phase from
-the dispersed second phase (for example, due to vaporization of liquid droplets) and any user-defined sources.</p>
-</blockquote>
-</li>
+<code>\frac{\partial \rho}{\partial t}+\nabla \cdot(\rho \vec{v})=S_{m}</code></li>
+<li>the general form of the mass conservation equation and is valid for incompressible as well as compressible flows. The $S_{m}$ source is the mass added to the continuous phase from
+the dispersed second phase (for example, due to vaporization of liquid droplets) and any user-defined sources.</li>
 <li>For 2D axisymmetric geometries, the continuity equation is given by:
-  $\frac{\partial \rho}{\partial t}+\frac{\partial}{\partial x}\left(\rho v_{x}\right)+\frac{\partial}{\partial r}\left(\rho v_{r}\right)+\frac{\rho v_{r}}{r}=S_{m}$</li>
+  <code>\frac{\partial \rho}{\partial t}+\frac{\partial}{\partial x}\left(\rho v_{x}\right)+\frac{\partial}{\partial r}\left(\rho v_{r}\right)+\frac{\rho v_{r}}{r}=S_{m}</code></li>
 </ul>
-<h4 id="212-momentum-conservation-equations">2.1.2 Momentum Conservation Equations</h4>
-<h4 id="212-species-transport-equations">2.1.2 Species Transport Equations</h4>
+<h5 id="212-momentum-conservation-equations">2.1.2 Momentum Conservation Equations</h5>
+<h5 id="212-species-transport-equations">2.1.2 Species Transport Equations</h5>
 <ul>
-<li>When you choose to solve conservation equations for chemical species, The Solver predicts the local mass fraction of each species, , through the solution of a convection-diffusion equation for the th species. This conservation equation takes the following general form:
-\
-  $\frac{\partial}{\partial t}\left(\rho Y_{i}\right)+\nabla \cdot\left(\rho \vec{v} Y_{i}\right)=-\nabla \cdot \vec{J}<em>{i}+R</em>{i}+S_{i}$</li>
-</ul>
-<blockquote>
+<li>
+<p>When you choose to solve conservation equations for chemical species, The Solver predicts the local mass fraction of each species, , through the solution of a convection-diffusion equation for the th species. This conservation equation takes the following general form:
+  $\frac{\partial}{\partial t}\left(\rho Y_{i}\right)+\nabla \cdot\left(\rho \vec{v} Y_{i}\right)=-\nabla \cdot \vec{J}<em>{i}+R</em>{i}+S_{i}$</p>
+</li>
+<li>
 <p>where is the net rate of production of species by chemical reaction (described later in this section) and is the rate of creation by addition from the dispersed phase plus any user-defined sources. An equation of this form will be solved for species where is the total number of fluid phase chemical species present in the system. Since the mass fraction of the species must sum to unity, the th mass fraction is determined as one minus the sum of the solved mass fractions. To minimize numerical error, the th species should be selected as that species with the overall largest mass fraction, such as when the oxidizer is air.</p>
-</blockquote>
-<ul>
-<li>Mass Diffusion in Laminar Flows
-  $\vec{J}<em>{i}=-\rho D</em>{i, m} \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}$</li>
+</li>
+<li>
+<p>Mass Diffusion in Laminar Flows
+ <code>\vec{J}_{i}=-\rho D_{i, m} \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}</code></p>
+</li>
 <li>Mass Diffusion in Turbulent Flows
-$ \vec{J}<em>{i}=-\left(\rho D</em>{i, m}+\frac{\mu_{t}}{S c_{t}}\right) \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}$</li>
+<code>\vec{J}_{i}=-\left(\rho D_{i, m}+\frac{\mu_{t}}{S c_{t}}\right) \nabla Y_{i}-D_{T, i} \frac{\nabla T}{T}</code></li>
 </ul>
 <hr />
 <p><strong>TO BE CONTINUED</strong></p></div>
