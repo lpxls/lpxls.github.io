@@ -109,11 +109,11 @@
     converted
     import datetime
     ws['A2'] = datetime.datetime.now()
-    wb.save("sample.xlsx")</code>
-    python-docx sample code:
-    ```
-    from docx import Document
-    from docx.shared import Inches</p>
+    wb.save("sample.xlsx")</code></p>
+<p>python-docx sample code:
+```
+from docx import Document
+from docx.shared import Inches</p>
 <p>document = Document()</p>
 <p>document.add_heading('Document Title', 0)</p>
 <p>p = document.add_paragraph('A plain paragraph having some ')
@@ -145,7 +145,7 @@ for qty, id, desc in records:
     row_cells[1].text = id
     row_cells[2].text = desc</p>
 <p>document.add_page_break()</p>
-<p>document.save('demo.docx')``
+<p>document.save('demo.docx')
 <code>fuzzy-wuzzy sample code:</code>
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
