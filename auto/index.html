@@ -111,47 +111,45 @@
     ws['A2'] = datetime.datetime.now()
     wb.save("sample.xlsx")</code></p>
 <p>python-docx sample code:
-```
-from docx import Document
-from docx.shared import Inches</p>
-<p>document = Document()</p>
-<p>document.add_heading('Document Title', 0)</p>
-<p>p = document.add_paragraph('A plain paragraph having some ')
-p.add_run('bold').bold = True
-p.add_run(' and some ')
-p.add_run('italic.').italic = True</p>
-<p>document.add_heading('Heading, level 1', level=1)
-document.add_paragraph('Intense quote', style='Intense Quote')</p>
-<p>document.add_paragraph(
+    <code>from docx import Document
+    from docx.shared import Inches
+    document = Document()
+    document.add_heading('Document Title', 0)
+    p = document.add_paragraph('A plain paragraph having some ')
+    p.add_run('bold').bold = True
+    p.add_run(' and some ')
+    p.add_run('italic.').italic = True
+    document.add_heading('Heading, level 1', level=1)
+    document.add_paragraph('Intense quote', style='Intense Quote')
+    document.add_paragraph(
     'first item in unordered list', style='List Bullet'
-)
-document.add_paragraph(
+    )
+    document.add_paragraph(
     'first item in ordered list', style='List Number'
-)</p>
-<p>document.add_picture('monty-truth.png', width=Inches(1.25))</p>
-<p>records = (
+    )
+    document.add_picture('monty-truth.png', width=Inches(1.25))</p>
+    records = (
     (3, '101', 'Spam'),
     (7, '422', 'Eggs'),
     (4, '631', 'Spam, spam, eggs, and spam')
-)</p>
-<p>table = document.add_table(rows=1, cols=3)
-hdr_cells = table.rows[0].cells
-hdr_cells[0].text = 'Qty'
-hdr_cells[1].text = 'Id'
-hdr_cells[2].text = 'Desc'
-for qty, id, desc in records:
+    )
+    table = document.add_table(rows=1, cols=3)
+    hdr_cells = table.rows[0].cells
+    hdr_cells[0].text = 'Qty'
+    hdr_cells[1].text = 'Id'
+    hdr_cells[2].text = 'Desc'
+    for qty, id, desc in records:
     row_cells = table.add_row().cells
     row_cells[0].text = str(qty)
     row_cells[1].text = id
-    row_cells[2].text = desc</p>
-<p>document.add_page_break()</p>
-<p>document.save('demo.docx')
-<code>fuzzy-wuzzy sample code:</code>
+    row_cells[2].text = desc
+    document.add_page_break()
+    document.save('demo.docx')</code></p>
+<p>fuzzy-wuzzy sample code:<code>
 from fuzzywuzzy import fuzz
 from fuzzywuzzy import process
 print(fuzz.ratio("this is a test", "this is a test!"))
-```</p>
-</li>
+</code></p>
 <li>
 <p>Auto Comments Generator for OT <code>50%</code></p>
 </li>
